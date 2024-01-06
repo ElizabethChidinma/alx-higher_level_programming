@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Defines a Rectangle class."""
 
 
@@ -29,7 +28,7 @@ class Rectangle:
         self.__width = value
 
     @property
-      def height(self):
+    def height(self):
         """Get/set the height of the Rectangle."""
         return self.__height
 
@@ -64,3 +63,19 @@ class Rectangle:
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
+
+
+if __name__ == "__main__":
+    my_rectangle = Rectangle(2, 4)
+    print("Area: {} - Perimeter: {}".format(my_rectangle.area(),
+          my_rectangle.perimeter()))
+
+    print(str(my_rectangle))
+    print(repr(my_rectangle))
+
+    print("--")
+
+    my_rectangle.width = 10
+    my_rectangle.height = 3
+    print(my_rectangle)
+    print(repr(my_rectangle))
